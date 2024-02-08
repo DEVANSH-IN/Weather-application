@@ -1,0 +1,118 @@
+
+/* Common styles for all screen sizes */
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: changeBackground 25s infinite alternate;
+    transition: background-image 0.9s ease-in-out;
+    background-image: url(https://wfmj.images.worldnow.com/images/19756166_G.jpg?auto=webp&disable=upscale&height=560&fit=bounds&lastEditedDate=1595777316000);
+}
+
+/* Define keyframes for background image changes */
+@keyframes changeBackground {
+    21% {
+        background-image: url('https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2VhdGhlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80');
+    }
+    30% {
+        background-image: url('https://marvel-b1-cdn.bc0a.com/f00000000151999/www.teradata.com/getattachment/96a8005f-e1b3-4211-b79a-9d05a6156d19/AdobeStock_253378150.jpeg?origin=fd');
+    }
+    11% {
+        background-image: url('https://wfmj.images.worldnow.com/images/19756166_G.jpg?auto=webp&disable=upscale&height=560&fit=bounds&lastEditedDate=1595777316000');
+    }
+    35% {
+        background-image: url('https://www.vmcdn.ca/f/files/sudbury/uploadedImages/SUMMER_sunWater.jpg;w=660.jpg');
+    }
+}
+
+
+/* Common styles for container */
+.container {
+    width: 42%;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(228, 209, 209, 0.2);
+    font-family: 'Caveat', cursive;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+/* Styles for small and medium-sized devices */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}
+
+/* Styles for input field */
+.input-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 40px;
+    border: 2px solid #4180d2;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 80%;
+    font-size: 16px;
+}
+
+input:focus {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.02);
+}
+
+/* Styles for search icon */
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-size: 20px;
+}
+
+.search-icon:hover {
+    color: #2678e4;
+    transform: scale(1.1);
+}
+
+/* Styles for weather information */
+.weather-info {
+    text-align: center;
+    color: rgb(0,0,0);
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.container:hover .weather-info {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+/* Styles for weather icons */
+.weather-icon {
+    font-size: 50px;
+    margin-top: 10px;
+}
+h1{
+    font-size: 3em;
+}
